@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Bai Jamjuree', sans-serif;
+  background: radial-gradient(circle at top, #0b0024, #000);
+  color: #e6e6fa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  overflow-x: hidden;
+}
+
+main {
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 25px rgba(100, 150, 255, 0.4);
+}
+
+.passo {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.passo.ativo {
+  display: flex;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  background: rgba(30, 30, 60, 0.5);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(120, 150, 255, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+button {
+  margin-top: 10px;
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(120, 100, 255, 0.4);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(150, 120, 255, 0.6);
+  background: linear-gradient(90deg, #5b21b6, #3b82f6);
+}
+
+/* Transição suave ao trocar passos */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.oculto {
+  display: none !important;
+}
